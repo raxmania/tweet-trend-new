@@ -1,3 +1,4 @@
+def registry = 'https://nekabara.jfrog.io'
 pipeline {
     agent {
         node {
@@ -27,7 +28,6 @@ pipeline {
         //     }
         // }
 
-        def registry = 'https://nekabara.jfrog.io'
         stage("Jar Publish") {
             steps {
                 script {
