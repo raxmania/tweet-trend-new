@@ -77,5 +77,13 @@ pipeline {
                 }
             }
         }
+
+        stage(" Deploy ") {
+          steps {
+            script {
+               sh './kubernetes/deploy.sh'
+            }
+          }
+        }
     }
 }
